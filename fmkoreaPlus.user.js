@@ -9,10 +9,12 @@
 // @match        https://www.fmkorea.com/*
 // @icon         https://www.google.com/s2/favicons?sz=64&domain=fmkorea.com
 // @grant        none
+// @updateURL    https://github.com/choyeun/fmkoreaPlus/raw/main/fmkoreaPlus.user.js
 // ==/UserScript==
 
 (function () {
     'use strict';
     alert("펨코 플러스가 적용되었습니다.")
+    GM_addElement(document.getElementsByClassName("member_1686667362 member_plate"), "div", { "class": "member_1686667362 member_plate", "style": "background-color: #000000; color: #ffffff; font-size: 20px; font-weight: bold; text-align: center; padding: 10px 0px;" }, "펨코 플러스")
     // Your code here...
 })();
