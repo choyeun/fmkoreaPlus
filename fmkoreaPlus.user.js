@@ -2,7 +2,7 @@
 // @name         fmkoreaPlus
 // @name:ko      펨코 플러스
 // @namespace    https://www.fmkorea.com/
-// @version      0.0.23
+// @version      0.0.24
 // @description  add function to fmkorea
 // @author       초연
 // @match        https://www.fmkorea.com/
@@ -12,7 +12,7 @@
 // @updateURL    https://update.greasyfork.org/scripts/485181/fmkoreaPlus.user.js
 // @downloadURL https://update.greasyfork.org/scripts/485181/fmkoreaPlus.user.js
 // @license MIT
-// @run-at document-body
+
 // ==/UserScript==
 
 (function () {
