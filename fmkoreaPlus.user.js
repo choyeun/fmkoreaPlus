@@ -2,7 +2,7 @@
 // @name         fmkoreaPlus
 // @name:ko      펨코 플러스
 // @namespace    https://www.fmkorea.com/
-// @version      0.0.3
+// @version      0.0.9
 // @description  add function to fmkorea
 // @author       초연
 // @match        https://www.fmkorea.com/
@@ -12,6 +12,7 @@
 // @updateURL    https://update.greasyfork.org/scripts/485181/fmkoreaPlus.user.js
 // @downloadURL https://update.greasyfork.org/scripts/485181/fmkoreaPlus.user.js
 // @license MIT
+// @run-at document-body
 // ==/UserScript==
 
 (function () {
@@ -20,3 +21,8 @@
     GM_addElement(document.getElementsByClassName("member_1686667362 member_plate"), "a", { "class": "member_1686667362 member_plate", "style": "background-color: #000000; color: #ffffff; font-size: 20px; font-weight: bold; text-align: center; padding: 10px 0px;" }, "펨코 플러스")
     // Your code here...
 })();
+
+window.onload = () => {
+    document.getElementsByClassName("author")[0].innerHTML = "초연",
+        alert(document.getElementsByClassName("author")[0])
+}
