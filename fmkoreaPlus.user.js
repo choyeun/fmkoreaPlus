@@ -2,7 +2,7 @@
 // @name         fmkoreaPlus
 // @name:ko      펨코 플러스
 // @namespace    https://www.fmkorea.com/
-// @version      0.0.22
+// @version      0.0.23
 // @description  add function to fmkorea
 // @author       초연
 // @match        https://www.fmkorea.com/
@@ -18,10 +18,18 @@
 (function () {
     'use strict';
     console.log("펨코 플러스?")
-    //GM_addElement(document.getElementsByClassName("member_1686667362 member_plate"), "a", { "class": "member_1686667362 member_plate", "style": "background-color: #000000; color: #ffffff; font-size: 20px; font-weight: bold; text-align: center; padding: 10px 0px;" }, "펨코 플러스")
-    // Your code here...
-    alert(document.getElementsByClassName("author").item)
-    alert("aaaaaaaaaaaaaaaaaaaaaaaa")
-})();
+    // 모든 요소 선택
+    var allElements = document.querySelectorAll('*');
+
+    // 각 요소의 클래스 검사
+    allElements.forEach(function (element) {
+        var classNames = element.classList;
+
+        // 특정 문자열을 포함하는 클래스가 있는지 확인
+        if (classNames && Array.from(classNames).some(className => className.includes('member_'))) {
+            console.log('클래스에 특정 문자열이 포함되어 있습니다:', element);
+        }
+    });
 
 
+})
