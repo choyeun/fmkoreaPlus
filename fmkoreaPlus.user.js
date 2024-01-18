@@ -2,7 +2,7 @@
 // @name         fmkoreaPlus
 // @name:ko      펨코 플러스
 // @namespace    https://www.fmkorea.com/
-// @version      0.0.29
+// @version      0.0.30
 // @description  add function to fmkorea
 // @author       초연
 // @match        https://www.fmkorea.com/
@@ -32,6 +32,7 @@
     //////////////////////////////////////////////
     // 확인된 클래스를 담을 배열 초기화
     var foundClasses = [];
+    var classNames = [];
 
     // 모든 요소 선택
     var allElements = document.querySelectorAll('*');
@@ -51,6 +52,7 @@
     //console.log('확인된 클래스 배열:', foundClasses[2]);
     for (var i = 0; i < foundClasses.length; i++) {
         console.log('확인된 클래스 배열:', foundClasses[i].value);
+        classNames.push(foundClasses[i].value);
     }
 
 })();
