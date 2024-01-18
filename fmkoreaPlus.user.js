@@ -2,7 +2,7 @@
 // @name         fmkoreaPlus
 // @name:ko      펨코 플러스
 // @namespace    https://www.fmkorea.com/
-// @version      0.0.28
+// @version      0.0.29
 // @description  add function to fmkorea
 // @author       초연
 // @match        https://www.fmkorea.com/
@@ -48,8 +48,10 @@
     });
 
     // 확인된 클래스 배열 출력
-    console.log('확인된 클래스 배열:', foundClasses);
-
+    //console.log('확인된 클래스 배열:', foundClasses[2]);
+    for (var i = 0; i < foundClasses.length; i++) {
+        console.log('확인된 클래스 배열:', foundClasses[i].value);
+    }
 
 })();
 
