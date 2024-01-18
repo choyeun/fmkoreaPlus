@@ -8,17 +8,16 @@
 // @match        https://www.fmkorea.com/
 // @match        https://www.fmkorea.com/*
 // @icon         https://www.google.com/s2/favicons?sz=64&domain=fmkorea.com
-// @grant        GM_addElement
+// @grant        none
 // @updateURL    https://update.greasyfork.org/scripts/485181/fmkoreaPlus.user.js
 // @downloadURL https://update.greasyfork.org/scripts/485181/fmkoreaPlus.user.js
 // @license MIT
-
+// @run-at document-body
 // ==/UserScript==
 
 (function () {
     'use strict';
     console.log("펨코 플러스?")
-    // 모든 요소 선택
     var allElements = document.querySelectorAll('*');
 
     // 각 요소의 클래스 검사
@@ -30,6 +29,5 @@
             console.log('클래스에 특정 문자열이 포함되어 있습니다:', element);
         }
     });
+})();
 
-
-})
