@@ -2,7 +2,7 @@
 // @name         fmkoreaPlus
 // @name:ko      펨코 플러스 
 // @namespace    https://www.fmkorea.com/
-// @version      2401190254
+// @version      2401190307
 // @description  add function to fmkorea
 // @author       초연
 // @match        https://www.fmkorea.com/
@@ -10,8 +10,8 @@
 // @grant        none
 // ==/UserScript==
 
-(function() {
+(function () {
     'use strict';
-    alert("test")
+    alert("테스트")
     // Your code here...
 })();
