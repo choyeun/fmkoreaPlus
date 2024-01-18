@@ -12,6 +12,6 @@
 
 (function () {
     'use strict';
-    alert("테스트")
+    alert("펨코 플러스가 적용되었습니다.")
     // Your code here...
 })();
