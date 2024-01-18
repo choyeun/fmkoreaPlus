@@ -2,7 +2,7 @@
 // @name         fmkoreaPlus
 // @name:ko      펨코 플러스
 // @namespace    https://www.fmkorea.com/
-// @version      0.0.13
+// @version      0.0.14
 // @description  add function to fmkorea
 // @author       초연
 // @match        https://www.fmkorea.com/
@@ -23,5 +23,4 @@
 })();
 
 
-document.getElementsByClassName("author")[0].innerHTML = "초연",
-    alert(document.getElementsByClassName("author").length)
+alert(document.getElementsByClassName("author").length)
