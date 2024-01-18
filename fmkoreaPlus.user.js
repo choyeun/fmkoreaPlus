@@ -2,7 +2,7 @@
 // @name         fmkoreaPlus
 // @name:ko      펨코 플러스
 // @namespace    https://www.fmkorea.com/
-// @version      0.0.26
+// @version      0.0.27
 // @description  add function to fmkorea
 // @author       초연
 // @match        https://www.fmkorea.com/
@@ -29,5 +29,27 @@
             console.log('클래스에 특정 문자열이 포함되어 있습니다:', element);
         }
     });
+    //////////////////////////////////////////////
+    // 확인된 클래스를 담을 배열 초기화
+    var foundClasses = [];
+
+    // 모든 요소 선택
+    var allElements = document.querySelectorAll('*');
+
+    // 각 요소의 클래스 검사
+    allElements.forEach(function (element) {
+        var classNames = element.classList;
+
+        // 특정 문자열을 포함하는 클래스가 있는지 확인
+        if (classNames && Array.from(classNames).some(className => className.includes('yourString'))) {
+            // 배열에 클래스 추가
+            foundClasses.push(classNames);
+        }
+    });
+
+    // 확인된 클래스 배열 출력
+    console.log('확인된 클래스 배열:', foundClasses);
+
+
 })();
 
