@@ -2,7 +2,7 @@
 // @name         fmkoreaPlus
 // @name:ko      펨코 플러스
 // @namespace    https://www.fmkorea.com/
-// @version      0.0.37
+// @version      0.0.38
 // @description  add function to fmkorea
 // @author       초연
 // @match        https://www.fmkorea.com/
@@ -17,7 +17,7 @@
 
 (function () {
     'use strict';
-    console.log("펨코 플러스?")
+    console.log("펨코 플러스")
 
     //////////////////////////////////////////////
     // 확인된 클래스를 담을 배열 초기화
