@@ -2,7 +2,7 @@
 // @name         fmkoreaPlus
 // @name:ko      펨코 플러스
 // @namespace    https://www.fmkorea.com/
-// @version      0.0.70
+// @version      0.0.71
 // @description  add function to fmkorea
 // @author       초연
 // @match        https://www.fmkorea.com/
@@ -113,15 +113,21 @@
 
         var matchingElements = document.evaluate(xpathExpression, document, null, XPathResult.ANY_TYPE, null);
 
+        // 결과를 배열로 변환
+        var elementsArray = [];
         var element = matchingElements.iterateNext();
-
         while (element) {
-            console.log('매칭된 요소:', element);
-            // 원하는 동작 수행
-            element.innerText = "히히";
-
+            elementsArray.push(element);
             element = matchingElements.iterateNext();
         }
+
+        // 이제 배열을 반복하여 각 요소에 접근
+        for (var i = 0; i < elementsArray.length; i++) {
+            console.log('매칭된 요소:', elementsArray[i]);
+            element.innerText = ""
+            // 원하는 동작 수행
+        }
+
 
 
 
