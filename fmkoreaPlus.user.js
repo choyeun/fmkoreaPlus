@@ -2,7 +2,7 @@
 // @name         fmkoreaPlus
 // @name:ko      펨코 플러스
 // @namespace    https://www.fmkorea.com/
-// @version      0.0.87
+// @version      0.0.88
 // @description  add function to fmkorea
 // @author       초연
 // @match        https://www.fmkorea.com/
@@ -70,7 +70,7 @@
             //console.log(document.getElementsByClassName(classNames[i])[0].id);
 
             //console.log(document.getElementsByClassName(classNames[i])[0].innerHTML);
-            document.getElementsByClassName(classNames[i])[0].innerText = "" // 기본 감지
+            //document.getElementsByClassName(classNames[i])[0].innerText = "" // 기본 감지
             //document.getElementsByClassName(classNames[i])[i].innerText = "" // 기본 감지 2
         }
 
