@@ -2,7 +2,7 @@
 // @name         fmkoreaPlus
 // @name:ko      펨코 플러스
 // @namespace    https://www.fmkorea.com/
-// @version      0.0.113
+// @version      0.0.114
 // @description  add function to fmkorea
 // @author       초연
 // @match        https://www.fmkorea.com/
@@ -227,8 +227,15 @@
 
 
 
+        // 글 목록에서 갤로그 바로가기 가능하게 만들기
+        var allElements = document.querySelectorAll('[class^="author"]');
+        allElements.forEach(function (span) {
+            span.addEventListener("click", function () {
+                window.location.href = "#popup_menu_area"
+            })
 
-    }, 500)
+        }, 500)
 
 
+    })();
 })();
