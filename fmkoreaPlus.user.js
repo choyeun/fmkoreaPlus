@@ -2,7 +2,7 @@
 // @name         fmkoreaPlus
 // @name:ko      펨코 플러스
 // @namespace    https://www.fmkorea.com/
-// @version      0.0.79
+// @version      0.0.80
 // @description  add function to fmkorea
 // @author       초연
 // @match        https://www.fmkorea.com/
@@ -110,33 +110,53 @@
 
         // comment_으로 시작하는 어떤 숫자든지 선택
         var xpathExpression = '//*[starts-with(@id, "comment_")]/div[1]/a';
+        var xpathExpression2 = '//*[starts-with(@id, "comment_")]/div[1]/a[1]';
 
         var matchingElements = document.evaluate(xpathExpression, document, null, XPathResult.ANY_TYPE, null);
 
+        var matchingElements2 = document.evaluate(xpathExpression2, document, null, XPathResult.ANY_TYPE, null);
+
         // 결과를 배열로 변환
         var elementsArray = [];
+        var elementsArray2 = [];
         var element = matchingElements.iterateNext();
+        var element2 = matchingElements2.iterateNext();
         while (element) {
             elementsArray.push(element);
             element = matchingElements.iterateNext();
         }
-
+        while (element2) {
+            elementsArray2.push(element2);
+            element2 = matchingElements2.iterateNext();
+        }
         // 이제 배열을 반복하여 각 요소에 접근
         for (var i = 0; i < elementsArray.length; i++) {
             console.log('매칭된 요소:', elementsArray[i]);
 
             // element가 null이 아닌 경우에만 innerText를 설정
             if (elementsArray[i]) {
-                if (elementsArray[i].matchingElements != "icon-hit") {
-                    elementsArray[i].innerText = "";
-                    // 원하는 동작 수행
-                }
+
+                elementsArray[i].innerText = "";
+                // 원하는 동작 수행
+
             }
 
 
         }
 
+        for (var i = 0; i < elementsArray2.length; i++) {
+            console.log('매칭된 요소:', elementsArray2[i]);
 
+            // element가 null이 아닌 경우에만 innerText를 설정
+            if (elementsArray2[i]) {
+
+                elementsArray2[i].innerText = "best";
+                // 원하는 동작 수행
+
+            }
+
+
+        }
 
     }, 500)
 
