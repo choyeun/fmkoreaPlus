@@ -2,7 +2,7 @@
 // @name         fmkoreaPlus
 // @name:ko      펨코 플러스
 // @namespace    https://www.fmkorea.com/
-// @version      0.0.40
+// @version      0.0.41
 // @description  add function to fmkorea
 // @author       초연
 // @match        https://www.fmkorea.com/
@@ -32,7 +32,7 @@
         var classNames = element.classList;
 
         // 특정 문자열을 포함하는 클래스가 있는지 확인
-        if (classNames && Array.from(classNames).some(className => className.includes('member_'))) {
+        if (classNames && Array.from(classNames).some(className => className.includes('member'))) {
             // 배열에 클래스 추가
             foundClasses.push(classNames);
         }
