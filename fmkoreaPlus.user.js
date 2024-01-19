@@ -2,7 +2,7 @@
 // @name         fmkoreaPlus
 // @name:ko      펨코 플러스
 // @namespace    https://www.fmkorea.com/
-// @version      0.0.62
+// @version      0.0.63
 // @description  add function to fmkorea
 // @author       초연
 // @match        https://www.fmkorea.com/
@@ -71,7 +71,7 @@
 
             console.log(document.getElementsByClassName(classNames[i])[0].innerHTML);
             document.getElementsByClassName(classNames[i])[0].innerText = "" // 기본 감지
-            document.getElementsByClassName(classNames[i])[i].innerText = "" // 기본 감지 2
+            //document.getElementsByClassName(classNames[i])[i].innerText = "" // 기본 감지 2
         }
 
 
@@ -87,7 +87,7 @@
             //console.log(document.getElementsByClassName(foundfindParent[i])[0].innerHTML);
             document.getElementsByClassName(foundfindParent[i])[0].innerText = "" // 대댓글 감지
             document.getElementsByClassName(foundfindParent[i])[i].innerText = "" // 대댓글 감지 2
-            document.getElementsByClassName(foundfindParent[0])[i].innerText = "" // 대댓글 감지 3
+            //document.getElementsByClassName(foundfindParent[0])[i].innerText = "" // 대댓글 감지 3
         }
 
         for (var i = 0; i < foundAuthor.length; i++) {
@@ -117,7 +117,7 @@
             //console.log(document.getElementsByClassName(foundfindParent[i])[0].innerHTML);
             document.getElementsByClassName(allElements[i])[0].innerText = "" // 대댓글 감지
             document.getElementsByClassName(allElements[i])[i].innerText = "" // 대댓글 감지 2
-            document.getElementsByClassName(allElements[0])[i].innerText = "" // 대댓글 감지 3
+            //document.getElementsByClassName(allElements[0])[i].innerText = "" // 대댓글 감지 3
         }
 
 
