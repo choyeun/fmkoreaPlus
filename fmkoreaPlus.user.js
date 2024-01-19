@@ -2,7 +2,7 @@
 // @name         fmkoreaPlus
 // @name:ko      펨코 플러스
 // @namespace    https://www.fmkorea.com/
-// @version      0.0.105
+// @version      0.0.106
 // @description  add function to fmkorea
 // @author       초연
 // @match        https://www.fmkorea.com/
@@ -216,16 +216,7 @@
                 // 원하는 동작 수행
             }
         });
-        // 각 <a> 태그에 대해 검사
-        for (i = 0; i < allAnchorTags.length; i++) {
-            allAnchorTags.forEach(function (anchorTag) {
-                // 클래스 이름이 "icon-hit"이면서 onclick 속성 값에 findComment과 숫자가 들어가 있는지 확인
-                if (anchorTag.classList.contains('icon-hit') && /findComment\(\d+\)/.test(anchorTag.getAttribute('onclick'))) {
-                    anchorTag.innerText = "★ BEST"
-                    // 원하는 동작 수행
-                }
-            });
-        }
+
 
 
     }, 500)
