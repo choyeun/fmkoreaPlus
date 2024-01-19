@@ -2,7 +2,7 @@
 // @name         fmkoreaPlus
 // @name:ko      펨코 플러스
 // @namespace    https://www.fmkorea.com/
-// @version      0.0.108
+// @version      0.0.109
 // @description  add function to fmkorea
 // @author       초연
 // @match        https://www.fmkorea.com/
@@ -97,7 +97,7 @@
             //console.log(document.getElementsByClassName(foundAuthor[i])[i].innerText);
 
             //console.log(document.getElementsByClassName(foundfindParent[i])[0].innerHTML);
-            document.getElementsByClassName(foundAuthor[i])[i].innerText = text // 글 목록의 닉네임 감지       //temp
+            //document.getElementsByClassName(foundAuthor[i])[i].innerText = text // 글 목록의 닉네임 감지       //temp
         }
 
 
@@ -206,9 +206,20 @@
         if (element) {
             element.innerText = "★ BEST";
         }
-
+        // 모든 <a> 태그 선택
+        var allAnchorTags = document.querySelectorAll('a');
+        allAnchorTags.forEach(function (anchorTag) {
+            // onclick 속성 값이 "return false;"을 가지는지 확인
+            if (anchorTag.getAttribute('onclick') === 'return false;') {
+                console.log('onclick 속성 값이 "return false;"을 가진 <a> 태그를 찾았습니다:', anchorTag);
+                anchorTag.innerText = text
+                // 원하는 동작 수행
+            }
+        });
 
 
 
     }, 500)
-});
+
+
+})();
