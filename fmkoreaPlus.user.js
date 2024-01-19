@@ -2,7 +2,7 @@
 // @name         fmkoreaPlus
 // @name:ko      펨코 플러스
 // @namespace    https://www.fmkorea.com/
-// @version      0.1.0
+// @version      0.0.102
 // @description  add function to fmkorea
 // @author       초연
 // @match        https://www.fmkorea.com/
@@ -226,10 +226,10 @@
                 }
             });
         }
-    });
-
-}, 500)
 
 
-}) ();
+    }, 500)
 
+
+        ();
+});
