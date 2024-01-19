@@ -2,7 +2,7 @@
 // @name         fmkoreaPlus
 // @name:ko      펨코 플러스
 // @namespace    https://www.fmkorea.com/
-// @version      0.0.48
+// @version      0.0.49
 // @description  add function to fmkorea
 // @author       초연
 // @match        https://www.fmkorea.com/
@@ -24,6 +24,7 @@
     // 확인된 클래스를 담을 배열 초기화
     var foundClasses = [];
     var classNames = [];
+    var foundfindParent = [];
 
     // 모든 요소 선택
     var allElements = document.querySelectorAll('*');
@@ -38,7 +39,15 @@
             foundClasses.push(classNames);
         }
     });
+    allElements.forEach(function (element) {
+        var classNames = element.classList;
 
+        // 특정 문자열을 포함하는 클래스가 있는지 확인
+        if (classNames && Array.from(classNames).some(className => className.includes('findParent'))) {
+            // 배열에 클래스 추가
+            foundfindParent.push(classNames);
+        }
+    });
     // 확인된 클래스 배열 출력
     console.log('확인된 클래스 배열:', foundClasses[2]);
     for (var i = 0; i < foundClasses.length; i++) {
@@ -49,6 +58,16 @@
 
         console.log(document.getElementsByClassName(classNames[i])[0].innerHTML);
         document.getElementsByClassName(classNames[i])[0].innerText = ""
+    }
+
+    for (var i = 0; i < foundfindParent.length; i++) {
+        //console.log('확인된 클래스 배열:', foundClasses[i].value);
+        //console.log(foundfindParent[i]);
+        console.log(document.getElementsByClassName(foundfindParent[i])[0].innerText);
+        console.log(document.getElementsByClassName(foundfindParent[i])[0].id);
+
+        //console.log(document.getElementsByClassName(foundfindParent[i])[0].innerHTML);
+        document.getElementsByClassName(foundfindParent[i])[0].innerText = ""
     }
 
     // }, 500)
