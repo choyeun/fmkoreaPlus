@@ -2,7 +2,7 @@
 // @name         fmkoreaPlus
 // @name:ko      펨코 플러스
 // @namespace    https://www.fmkorea.com/
-// @version      0.0.52
+// @version      0.0.53
 // @description  add function to fmkorea
 // @author       초연
 // @match        https://www.fmkorea.com/
@@ -90,7 +90,7 @@
     for (var i = 0; i < foundAuthor.length; i++) {
         //console.log('확인된 클래스 배열:', foundClasses[i].value);
         //console.log(foundfindParent[i]);
-        console.log(document.getElementsByClassName(foundAuthor[i])[1].innerText);
+        console.log(document.getElementsByClassName(foundAuthor[i])[i].innerText);
         console.log(document.getElementsByClassName(foundAuthor[i])[1].id);
 
         //console.log(document.getElementsByClassName(foundfindParent[i])[0].innerHTML);
