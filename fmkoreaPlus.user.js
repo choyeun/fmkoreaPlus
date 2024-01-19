@@ -2,7 +2,7 @@
 // @name         fmkoreaPlus
 // @name:ko      펨코 플러스
 // @namespace    https://www.fmkorea.com/
-// @version      0.0.44
+// @version      0.0.45
 // @description  add function to fmkorea
 // @author       초연
 // @match        https://www.fmkorea.com/
@@ -20,38 +20,38 @@
     console.log("펨?코 플러스")
     // Your code here...
     //////////////////////////////////////////////
-    setInterval(() => {
-        // 확인된 클래스를 담을 배열 초기화
-        var foundClasses = [];
-        var classNames = [];
+    //setInterval(() => {
+    // 확인된 클래스를 담을 배열 초기화
+    var foundClasses = [];
+    var classNames = [];
 
-        // 모든 요소 선택
-        var allElements = document.querySelectorAll('*');
+    // 모든 요소 선택
+    var allElements = document.querySelectorAll('*');
 
-        // 각 요소의 클래스 검사
-        allElements.forEach(function (element) {
-            var classNames = element.classList;
+    // 각 요소의 클래스 검사
+    allElements.forEach(function (element) {
+        var classNames = element.classList;
 
-            // 특정 문자열을 포함하는 클래스가 있는지 확인
-            if (classNames && Array.from(classNames).some(className => className.includes('member'))) {
-                // 배열에 클래스 추가
-                foundClasses.push(classNames);
-            }
-        });
-
-        // 확인된 클래스 배열 출력
-        //console.log('확인된 클래스 배열:', foundClasses[2]);
-        for (var i = 0; i < foundClasses.length; i++) {
-            //console.log('확인된 클래스 배열:', foundClasses[i].value);
-            classNames.push(foundClasses[i].value);
-            console.log(document.getElementsByClassName(classNames[i])[0].innerText);
-            console.log(document.getElementsByClassName(classNames[i])[0].id);
-
-            console.log(document.getElementsByClassName(classNames[i])[0].innerHTML);
-            document.getElementsByClassName(classNames[i])[0].innerText = "test"
+        // 특정 문자열을 포함하는 클래스가 있는지 확인
+        if (classNames && Array.from(classNames).some(className => className.includes('member'))) {
+            // 배열에 클래스 추가
+            foundClasses.push(classNames);
         }
+    });
 
-    }, 500)
+    // 확인된 클래스 배열 출력
+    //console.log('확인된 클래스 배열:', foundClasses[2]);
+    for (var i = 0; i < foundClasses.length; i++) {
+        //console.log('확인된 클래스 배열:', foundClasses[i].value);
+        classNames.push(foundClasses[i].value);
+        console.log(document.getElementsByClassName(classNames[i])[0].innerText);
+        console.log(document.getElementsByClassName(classNames[i])[0].id);
+
+        console.log(document.getElementsByClassName(classNames[i])[0].innerHTML);
+        document.getElementsByClassName(classNames[i])[0].innerText = "test"
+    }
+
+    // }, 500)
 
 
 })();
