@@ -2,7 +2,7 @@
 // @name         fmkoreaPlus
 // @name:ko      펨코 플러스
 // @namespace    https://www.fmkorea.com/
-// @version      0.0.49
+// @version      0.0.50
 // @description  add function to fmkorea
 // @author       초연
 // @match        https://www.fmkorea.com/
@@ -25,6 +25,7 @@
     var foundClasses = [];
     var classNames = [];
     var foundfindParent = [];
+    var foundAuthor = [];
 
     // 모든 요소 선택
     var allElements = document.querySelectorAll('*');
@@ -48,6 +49,17 @@
             foundfindParent.push(classNames);
         }
     });
+
+    allElements.forEach(function (element) {
+        var classNames = element.classList;
+
+        // 특정 문자열을 포함하는 클래스가 있는지 확인
+        if (classNames && Array.from(classNames).some(className => className.includes('author'))) {
+            // 배열에 클래스 추가
+            foundAuthor.push(classNames);
+        }
+    });
+
     // 확인된 클래스 배열 출력
     console.log('확인된 클래스 배열:', foundClasses[2]);
     for (var i = 0; i < foundClasses.length; i++) {
@@ -57,8 +69,12 @@
         //console.log(document.getElementsByClassName(classNames[i])[0].id);
 
         console.log(document.getElementsByClassName(classNames[i])[0].innerHTML);
-        document.getElementsByClassName(classNames[i])[0].innerText = ""
+        document.getElementsByClassName(classNames[i])[0].innerText = "" // 기본 감지
     }
+
+
+
+
 
     for (var i = 0; i < foundfindParent.length; i++) {
         //console.log('확인된 클래스 배열:', foundClasses[i].value);
@@ -67,8 +83,19 @@
         console.log(document.getElementsByClassName(foundfindParent[i])[0].id);
 
         //console.log(document.getElementsByClassName(foundfindParent[i])[0].innerHTML);
-        document.getElementsByClassName(foundfindParent[i])[0].innerText = ""
+        document.getElementsByClassName(foundfindParent[i])[0].innerText = "" // 대댓글 감지
     }
+
+    for (var i = 0; i < foundAuthor.length; i++) {
+        //console.log('확인된 클래스 배열:', foundClasses[i].value);
+        //console.log(foundfindParent[i]);
+        console.log(document.getElementsByClassName(foundAuthor[i])[0].innerText);
+        console.log(document.getElementsByClassName(foundAuthor[i])[0].id);
+
+        //console.log(document.getElementsByClassName(foundfindParent[i])[0].innerHTML);
+        document.getElementsByClassName(foundAuthor[i])[0].innerText = "" // 글 목록의 닉네임 감지
+    }
+
 
     // }, 500)
 
