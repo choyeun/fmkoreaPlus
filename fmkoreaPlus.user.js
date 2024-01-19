@@ -2,7 +2,7 @@
 // @name         fmkoreaPlus
 // @name:ko      펨코 플러스
 // @namespace    https://www.fmkorea.com/
-// @version      0.0.68
+// @version      0.0.69
 // @description  add function to fmkorea
 // @author       초연
 // @match        https://www.fmkorea.com/
@@ -108,22 +108,25 @@
 
 
 
-        for (var i = 0; i < allElements.length; i++) {
-            //console.log('확인된 클래스 배열:', foundClasses[i].value);
-            //console.log(foundfindParent[i]);
-            //console.log(document.getElementsByClassName(allElements[i])[0].innerText);
-            //console.log(document.getElementsByClassName(allElements[i])[0]);
+        // comment_으로 시작하는 어떤 숫자든지 선택
+        var xpathExpression = '//*[starts-with(@id, "comment_")]/div[1]/a';
 
-            //console.log(document.getElementsByClassName(foundfindParent[i])[0].innerHTML);
-            //document.getElementsByClassName(allElements[i])[0].innerText = "" // 대댓글 감지
-            //document.getElementsByClassName(allElements[i])[i].innerText = "" // 대댓글 감지 2
-            //document.getElementsByClassName(allElements[0])[i].innerText = "" // 대댓글 감지 3
+        var matchingElements = document.evaluate(xpathExpression, document, null, XPathResult.ANY_TYPE, null);
+
+        var element = matchingElements.iterateNext();
+
+        while (element) {
+            console.log('매칭된 요소:', element);
+            // 원하는 동작 수행
+            element.innerText = "히히" + element.innerText;
+
+            element = matchingElements.iterateNext();
         }
 
 
 
 
-    }, 500)
+    }, 5000)
 
 
 })();
