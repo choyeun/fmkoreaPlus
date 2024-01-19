@@ -2,7 +2,7 @@
 // @name         fmkoreaPlus
 // @name:ko      펨코 플러스
 // @namespace    https://www.fmkorea.com/
-// @version      0.0.109
+// @version      0.0.110
 // @description  add function to fmkorea
 // @author       초연
 // @match        https://www.fmkorea.com/
@@ -18,7 +18,7 @@
 (function () {
     'use strict';
     var text = "아이디 들어가는 자리"
-    console.log("펨코 플러스!")
+    console.log("펨코 플러스")
     // Your code here...
     //////////////////////////////////////////////
     setInterval(() => {
