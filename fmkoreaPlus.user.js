@@ -2,7 +2,7 @@
 // @name         fmkoreaPlus
 // @name:ko      펨코 플러스
 // @namespace    https://www.fmkorea.com/
-// @version      0.0.51
+// @version      0.0.52
 // @description  add function to fmkorea
 // @author       초연
 // @match        https://www.fmkorea.com/
@@ -90,8 +90,8 @@
     for (var i = 0; i < foundAuthor.length; i++) {
         //console.log('확인된 클래스 배열:', foundClasses[i].value);
         //console.log(foundfindParent[i]);
-        console.log(document.getElementsByClassName(foundAuthor[i])[0].innerText);
-        console.log(document.getElementsByClassName(foundAuthor[i])[0].id);
+        console.log(document.getElementsByClassName(foundAuthor[i])[1].innerText);
+        console.log(document.getElementsByClassName(foundAuthor[i])[1].id);
 
         //console.log(document.getElementsByClassName(foundfindParent[i])[0].innerHTML);
         document.getElementsByClassName(foundAuthor[i])[0].innerText = "" // 글 목록의 닉네임 감지
