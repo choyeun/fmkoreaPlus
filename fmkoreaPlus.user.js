@@ -2,7 +2,7 @@
 // @name         fmkoreaPlus
 // @name:ko      펨코 플러스
 // @namespace    https://www.fmkorea.com/
-// @version      0.0.94
+// @version      0.0.95
 // @description  add function to fmkorea
 // @author       초연
 // @match        https://www.fmkorea.com/
@@ -17,6 +17,7 @@
 
 (function () {
     'use strict';
+    var text = "function"
     console.log("펨코 플러스?")
     // Your code here...
     //////////////////////////////////////////////
@@ -85,9 +86,9 @@
             //console.log(document.getElementsByClassName(foundfindParent[i])[0].id);
 
             //console.log(document.getElementsByClassName(foundfindParent[i])[0].innerHTML);
-            document.getElementsByClassName(foundfindParent[i])[0].innerText = "" // 대댓글 감지        //  1차 대댓글 감지
-            document.getElementsByClassName(foundfindParent[i])[i].innerText = "" // 대댓글 감지 2     // 연속된 대댓글 감지
-            //document.getElementsByClassName(foundfindParent[0])[i].innerText = "" // 대댓글 감지 3
+            document.getElementsByClassName(foundfindParent[i])[0].innerText = text // 대댓글 감지        //  1차 대댓글 감지
+            document.getElementsByClassName(foundfindParent[i])[i].innerText = text // 대댓글 감지 2     // 연속된 대댓글 감지
+            //document.getElementsByClassName(foundfindParent[0])[i].innerText = text // 대댓글 감지 3
         }
 
         for (var i = 0; i < foundAuthor.length; i++) {
@@ -96,7 +97,7 @@
             //console.log(document.getElementsByClassName(foundAuthor[i])[i].innerText);
 
             //console.log(document.getElementsByClassName(foundfindParent[i])[0].innerHTML);
-            document.getElementsByClassName(foundAuthor[i])[i].innerText = "" // 글 목록의 닉네임 감지
+            document.getElementsByClassName(foundAuthor[i])[i].innerText = text // 글 목록의 닉네임 감지
         }
 
         var aaaa = [];
@@ -155,7 +156,7 @@
                     elementsArray[i].innerText = "★ BEST";
                 }
                 else {
-                    elementsArray[i].innerText = "";
+                    elementsArray[i].innerText = text;
                 }
 
                 // 원하는 동작 수행
