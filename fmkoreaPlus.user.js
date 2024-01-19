@@ -2,7 +2,7 @@
 // @name         fmkoreaPlus
 // @name:ko      펨코 플러스
 // @namespace    https://www.fmkorea.com/
-// @version      0.0.98
+// @version      0.0.99
 // @description  add function to fmkorea
 // @author       초연
 // @match        https://www.fmkorea.com/
@@ -99,6 +99,38 @@
             //console.log(document.getElementsByClassName(foundfindParent[i])[0].innerHTML);
             //document.getElementsByClassName(foundAuthor[i])[i].innerText = text // 글 목록의 닉네임 감지       //temp
         }
+
+
+
+
+
+        // 모든 span.author 요소 선택
+        var allAuthorSpans = document.querySelectorAll('span.author');
+        var allSpan = [];
+        // 각 span.author 요소에 대해 검사
+        allAuthorSpans.forEach(function (authorSpan) {
+            // 해당 span 요소의 하위 요소가 없는지 확인
+            if (authorSpan.childElementCount === 0) {
+                console.log('클래스가 "author"이고 하위 요소가 없는 span 요소를 찾았습니다:', authorSpan);
+                allSpan.push(authorSpan);
+                // 원하는 동작 수행
+            }
+        });
+        for (var i = 0; i < allSpan.length; i++) {
+            //console.log('확인된 클래스 배열:', foundClasses[i].value);
+            //console.log(foundfindParent[i]);
+            //console.log(document.getElementsByClassName(foundAuthor[i])[i].innerText);
+
+            //console.log(document.getElementsByClassName(foundfindParent[i])[0].innerHTML);
+            allSpan[i].innerText = text // 글 목록의 닉네임 감지 2      //temp
+        }
+
+
+
+
+
+
+
 
         var aaaa = [];
         // 대댓글 감지 안 되서 다시 한번 더
