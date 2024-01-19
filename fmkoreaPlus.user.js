@@ -2,7 +2,7 @@
 // @name         fmkoreaPlus
 // @name:ko      펨코 플러스
 // @namespace    https://www.fmkorea.com/
-// @version      0.0.69
+// @version      0.0.70
 // @description  add function to fmkorea
 // @author       초연
 // @match        https://www.fmkorea.com/
@@ -118,7 +118,7 @@
         while (element) {
             console.log('매칭된 요소:', element);
             // 원하는 동작 수행
-            element.innerText = "히히" + element.innerText;
+            element.innerText = "히히";
 
             element = matchingElements.iterateNext();
         }
