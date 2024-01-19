@@ -2,7 +2,7 @@
 // @name         fmkoreaPlus
 // @name:ko      펨코 플러스
 // @namespace    https://www.fmkorea.com/
-// @version      0.0.84
+// @version      0.0.85
 // @description  add function to fmkorea
 // @author       초연
 // @match        https://www.fmkorea.com/
@@ -161,8 +161,19 @@
                 // 원하는 동작 수행
 
             } if (elementsArray2[i]) {
+                for (var i = 0; i < elementsArray2.length; i++) {
+                    console.log('매칭된 요소:', elementsArray2[i]);
 
-                elementsArray2[i].innerText = "★ BEST";
+                    // element가 null이 아닌 경우에만 innerText를 설정
+                    if (elementsArray2[i]) {
+
+                        elementsArray2[i].innerText = "★ BEST";
+                        // 원하는 동작 수행
+
+                    }
+
+
+                }
                 // 원하는 동작 수행
 
             }
