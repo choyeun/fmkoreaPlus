@@ -2,7 +2,7 @@
 // @name         fmkoreaPlus
 // @name:ko      펨코 플러스
 // @namespace    https://www.fmkorea.com/
-// @version      0.0.89
+// @version      0.0.90
 // @description  add function to fmkorea
 // @author       초연
 // @match        https://www.fmkorea.com/
@@ -151,7 +151,7 @@
 
             // element가 null이 아닌 경우에만 innerText를 설정
             if (elementsArray[i]) {
-                if (elementsArray[i].innerText == "★ BEST") { }
+                if (elementsArray2[i].innerText == "★ BEST") { }
                 else {
                     elementsArray[i].innerText = "";
                 }
