@@ -2,7 +2,7 @@
 // @name         fmkoreaPlus
 // @name:ko      펨코 플러스
 // @namespace    https://www.fmkorea.com/
-// @version      0.0.71
+// @version      0.0.72
 // @description  add function to fmkorea
 // @author       초연
 // @match        https://www.fmkorea.com/
@@ -124,9 +124,14 @@
         // 이제 배열을 반복하여 각 요소에 접근
         for (var i = 0; i < elementsArray.length; i++) {
             console.log('매칭된 요소:', elementsArray[i]);
-            element.innerText = ""
-            // 원하는 동작 수행
+
+            // element가 null이 아닌 경우에만 innerText를 설정
+            if (elementsArray[i]) {
+                elementsArray[i].innerText = "";
+                // 원하는 동작 수행
+            }
         }
+
 
 
 
