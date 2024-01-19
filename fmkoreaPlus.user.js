@@ -2,7 +2,7 @@
 // @name         fmkoreaPlus
 // @name:ko      펨코 플러스
 // @namespace    https://www.fmkorea.com/
-// @version      0.0.91
+// @version      0.0.92
 // @description  add function to fmkorea
 // @author       초연
 // @match        https://www.fmkorea.com/
@@ -168,6 +168,10 @@
             }
 
 
+        }
+        var element = document.querySelector('.icon-hit[onclick="moveToBest(); return false;"]');
+        if (element) {
+            element.innerText = "★ BEST";
         }
 
     }, 500)
